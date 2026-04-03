@@ -1,22 +1,26 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+import React, { useState } from "react";
 
-  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+function App() {
+  const [showProducts, setShowProducts] = useState(false);
+
+  return (
+    <div>
+      {!showProducts ? (
+        <div>
+          <h1>Welcome to Paradise Nursery</h1>
+
+          <button onClick={() => setShowProducts(true)}>
+            Get Started
+          </button>
+        </div>
+      ) : (
+        <div>
+          <h2>Our Plants</h2>
+          <p>Product list will be displayed here.</p>
+        </div>
+      )}
+    </div>
+  );
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  padding-top: 50px;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
-}
+export default App;
