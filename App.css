@@ -1,26 +1,6 @@
-import React, { useState } from "react";
-
-function App() {
-  const [showProducts, setShowProducts] = useState(false);
-
-  return (
-    <div>
-      {!showProducts ? (
-        <div>
-          <h1>Welcome to Paradise Nursery</h1>
-
-          <button onClick={() => setShowProducts(true)}>
-            Get Started
-          </button>
-        </div>
-      ) : (
-        <div>
-          <h2>Our Plants</h2>
-          <p>Product list will be displayed here.</p>
-        </div>
-      )}
-    </div>
-  );
+body {
+  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-export default App;
